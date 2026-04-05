@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Max-Leon Ernst</title>
+		<meta name="description" content="C# Software Engineer, 18, near Düsseldorf." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="cursor-dot"></div>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	* { cursor: none; }
+
+	.cursor-dot {
+		width: 5px;
+		height: 5px;
+		background: #a5b4fc;
+		border-radius: 50%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		z-index: 9999;
+		transform: translate(-50%, -50%);
+	}
+
+</style>
+
+<script>
+	const dot = document.querySelector('.cursor-dot') as HTMLElement;
+
+	document.addEventListener('mousemove', (e) => {
+		dot.style.left = e.clientX + 'px';
+		dot.style.top = e.clientY + 'px';
+	});
+</script>
