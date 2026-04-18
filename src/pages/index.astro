@@ -93,20 +93,14 @@ import Layout from '../layouts/Layout.astro';
 				<p class="section-label">Projects</p>
 				<div class="projects">
 
-					<a href="https://store.steampowered.com/app/4071050/Papered/" class="card" target="_blank" rel="noopener">
-						<p class="card-tag">Game · Steam</p>
-						<h3>Papered</h3>
-						<p class="card-desc">A fast-paced first-person arena hack-and-slash set inside a living sketchbook. Fight paper enemies, collect fragments, and build your run.</p>
-						<div class="card-footer">
-							<span class="tag">Unity</span>
-							<span class="tag">C#</span>
-							<span class="card-arrow">→</span>
-						</div>
-					</a>
-
 					<a href="https://github.com/chiouyazo/StorkDrop" class="card" target="_blank" rel="noopener">
 						<p class="card-tag">Open Source · GitHub</p>
-						<h3>StorkDrop</h3>
+						<div class="card-title-row">
+							<div class="card-icon">
+								<img src="/stork_icon_256.png" alt="StorkDrop" />
+							</div>
+							<h3>StorkDrop</h3>
+						</div>
 						<p class="card-desc">Manifest-driven software deployment for servers and workstations. Browse, install, and update software from Nexus OSS registries, with a WPF marketplace UI and CLI support.</p>
 						<div class="card-footer">
 							<span class="tag">C#</span>
@@ -116,12 +110,14 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 					</a>
 
-				</div>
-				<div class="projects">
-
 					<a href="https://github.com/chiouyazo/VmManager" class="card" target="_blank" rel="noopener">
 						<p class="card-tag">Open Source · GitHub</p>
-						<h3>VM Manager</h3>
+						<div class="card-title-row">
+							<div class="card-icon">
+								<img src="/VmManager256.png" alt="VM Manager" />
+							</div>
+							<h3>VM Manager</h3>
+						</div>
 						<p class="card-desc">WPF & ASP based HyperV wrapper with remote agents and a secured RDP proxy to enable easy VM Template and VM management.</p>
 						<div class="card-footer">
 							<span class="tag">C#</span>
@@ -132,15 +128,36 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 					</a>
 
+				</div>
+				<div class="projects">
+
 					<a href="https://github.com/chiouyazo/ForgeBoard" class="card" target="_blank" rel="noopener">
 						<p class="card-tag">Open Source · GitHub</p>
-						<h3>ForgeBoard</h3>
+						<div class="card-title-row">
+							<div class="card-icon">
+								<img src="/logo256.png" alt="ForgeBoard" />
+							</div>
+							<h3>ForgeBoard</h3>
+						</div>
 						<p class="card-desc">HashiCorp packer wrapper to enable build instructions to be constructed using a web based build wizard, a step tempalte library, and fully automated build chaining.</p>
 						<div class="card-footer">
 							<span class="tag">C#</span>
 							<span class="tag">UNO</span>
 							<span class="tag">ASP.NET</span>
 							<span class="tag">HashiCorp packer</span>
+							<span class="card-arrow">→</span>
+						</div>
+					</a>
+
+					<a href="https://store.steampowered.com/app/4071050/Papered/" class="card" target="_blank" rel="noopener">
+						<p class="card-tag">Game · Steam</p>
+						<div class="card-title-row">
+							<img class="card-title-logo" src="/PaperedLogo.png" alt="Papered" />
+						</div>
+						<p class="card-desc">A fast-paced first-person arena hack-and-slash set inside a living sketchbook. Fight paper enemies, collect fragments, and build your run.</p>
+						<div class="card-footer">
+							<span class="tag">Unity</span>
+							<span class="tag">C#</span>
 							<span class="card-arrow">→</span>
 						</div>
 					</a>
@@ -476,6 +493,47 @@ import Layout from '../layouts/Layout.astro';
 		overflow: hidden;
 	}
 
+	.card-title-row {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-bottom: 12px;
+		min-height: 48px;
+	}
+
+	.card-title-row h3 {
+		margin-bottom: 0;
+		line-height: 1;
+		padding-top: 10px;
+	}
+
+	.card-icon {
+		width: 48px;
+		height: 48px;
+		border-radius: 12px;
+		flex-shrink: 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.card-icon img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.card-title-logo {
+		height: 72px;
+		width: auto;
+		max-width: 100%;
+		object-fit: contain;
+		object-position: left center;
+		margin: -12px 0 -6px 0;
+		filter: drop-shadow(0 0 24px rgba(167, 139, 250, 0.35));
+	}
+
 	.card::after {
 		content: '';
 		position: absolute;
@@ -507,7 +565,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.card h3 {
-		font-size: 24px;
+		font-size: 28px;
 		font-weight: 650;
 		color: #f8fafc;
 		margin-bottom: 12px;
