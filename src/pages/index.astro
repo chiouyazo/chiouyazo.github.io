@@ -101,7 +101,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<h3>StorkDrop</h3>
 						</div>
-						<p class="card-desc">Manifest-driven software deployment for servers and workstations. Browse, install, and update software from Nexus OSS registries, with a WPF marketplace UI and CLI support.</p>
+						<p class="card-desc">Manifest-driven software deployment for servers and workstations. Browse, install, and update software from Nexus OSS registries, with a WPF marketplace UI and CLI support. <br>Used in production by midsized companies!</p>
 						<div class="card-footer">
 							<span class="tag">C#</span>
 							<span class="tag">.NET</span>
@@ -118,10 +118,11 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<h3>VM Manager</h3>
 						</div>
-						<p class="card-desc">WPF & ASP based HyperV wrapper with remote agents and a secured RDP proxy to enable easy VM Template and VM management.</p>
+						<p class="card-desc">ASP based HyperV and Proxmox wrapper with remote agents and a secured RDP proxy to enable easy VM Template and VM management as well as secure connections behind a firewall.</p>
 						<div class="card-footer">
 							<span class="tag">C#</span>
 							<span class="tag">WPF</span>
+							<span class="tag">Blazor</span>
 							<span class="tag">ASP.NET</span>
 							<span class="tag">WMI</span>
 							<span class="card-arrow">→</span>
@@ -131,20 +132,21 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				<div class="projects">
 
-					<a href="https://github.com/chiouyazo/ForgeBoard" class="card" target="_blank" rel="noopener">
+					<a href="https://github.com/chiouyazo/ConfigForge" class="card" target="_blank" rel="noopener">
 						<p class="card-tag">Open Source · GitHub</p>
 						<div class="card-title-row">
 							<div class="card-icon">
-								<img src="/logo256.png" alt="ForgeBoard" />
+								<img src="/configforge.svg" alt="ConfigForge" />
 							</div>
-							<h3>ForgeBoard</h3>
+							<h3>ConfigForge</h3>
 						</div>
-						<p class="card-desc">HashiCorp packer wrapper to enable build instructions to be constructed using a web based build wizard, a step tempalte library, and fully automated build chaining.</p>
+						<p class="card-desc">Automatically generates highly customizable configuration UIs from a C# DTO, configurable through attributes or by hand. Plugin-capable for integrating custom controls and fully JsonForms compatible.</p>
 						<div class="card-footer">
 							<span class="tag">C#</span>
-							<span class="tag">UNO</span>
+							<span class="tag">.NET</span>
 							<span class="tag">ASP.NET</span>
-							<span class="tag">HashiCorp packer</span>
+							<span class="tag">Blazor</span>
+							<span class="tag">JsonForms</span>
 							<span class="card-arrow">→</span>
 						</div>
 					</a>
@@ -163,6 +165,77 @@ import Layout from '../layouts/Layout.astro';
 					</a>
 
 				</div>
+
+				<div class="mini-projects">
+
+					<a href="https://github.com/chiouyazo/CloudEventSink" class="mini-card" target="_blank" rel="noopener">
+						<div class="mini-icon">
+							<img src="/cloudeventsink.svg" alt="CloudEventSink" />
+						</div>
+						<div class="mini-body">
+							<h3>CloudEventSink</h3>
+							<p class="mini-desc">CloudEvent sink that stores incoming events in a PostgreSQL database and surfaces them through a highly customizable graphical query designer and dashboards, including endpoint and secrets management.</p>
+							<div class="mini-tags">
+								<span class="tag">C#</span>
+								<span class="tag">ASP.NET</span>
+								<span class="tag">PostgreSQL</span>
+								<span class="tag">CloudEvents</span>
+							</div>
+						</div>
+						<span class="card-arrow">→</span>
+					</a>
+
+					<a href="https://github.com/chiouyazo/CodeStripper" class="mini-card" target="_blank" rel="noopener">
+						<div class="mini-icon">
+							<img src="/codestripper.svg" alt="CodeStripper" />
+						</div>
+						<div class="mini-body">
+							<h3>CodeStripper</h3>
+							<p class="mini-desc">Roslyn-based tool that produces stripped copies of C# source, keeping the public API surface, signatures, and documentation while removing method bodies and internal logic. The stripped tree still compiles and works as reference context for writing integration tests against a contract.</p>
+							<div class="mini-tags">
+								<span class="tag">C#</span>
+								<span class="tag">.NET</span>
+								<span class="tag">Roslyn</span>
+							</div>
+						</div>
+						<span class="card-arrow">→</span>
+					</a>
+
+					<a href="https://github.com/chiouyazo/NetFxProxy" class="mini-card" target="_blank" rel="noopener">
+						<div class="mini-icon">
+							<img src="/netfxproxy.svg" alt="NetFxProxy" />
+						</div>
+						<div class="mini-body">
+							<h3>NetFxProxy</h3>
+							<p class="mini-desc">Bridges legacy .NET Framework 4.8 assemblies into modern .NET 10 applications inside a single process, hosting both runtimes side by side through a C++/CLI bridge. Generates matching proxy types and transparently marshals calls without separate processes or IPC.</p>
+							<div class="mini-tags">
+								<span class="tag">C#</span>
+								<span class="tag">C++/CLI</span>
+								<span class="tag">.NET 10</span>
+								<span class="tag">.NET Framework</span>
+							</div>
+						</div>
+						<span class="card-arrow">→</span>
+					</a>
+
+					<a href="https://github.com/chiouyazo/ForgeBoard" class="mini-card" target="_blank" rel="noopener">
+						<div class="mini-icon">
+							<img src="/logo256.png" alt="ForgeBoard" />
+						</div>
+						<div class="mini-body">
+							<h3>ForgeBoard</h3>
+							<p class="mini-desc">HashiCorp Packer wrapper to construct build instructions via a web-based build wizard, a step template library, and fully automated build chaining.</p>
+							<div class="mini-tags">
+								<span class="tag">C#</span>
+								<span class="tag">UNO</span>
+								<span class="tag">ASP.NET</span>
+								<span class="tag">HashiCorp Packer</span>
+							</div>
+						</div>
+						<span class="card-arrow">→</span>
+					</a>
+
+				</div>
 			</div>
 		</section>
 
@@ -178,12 +251,12 @@ import Layout from '../layouts/Layout.astro';
 						<div class="job-body">
 							<div class="job-top">
 								<div>
-									<p class="job-role">C# Software Engineer</p>
+									<p class="job-role">C# Software & DevOps Engineer</p>
 									<p class="job-company">creativITy GmbH · Full-time · Hybrid, Mettmann</p>
 								</div>
 								<span class="job-period">Aug 2025 – Present</span>
 							</div>
-							<p class="job-desc">.NET Framework and .NET Core development.</p>
+							<p class="job-desc">.NET Framework and .NET Core Plugin and connector development for ERP Systems. DevOps & infrastructure development + management for automated testing, automatic VM provisioning, automatic release deployment.</p>
 						</div>
 					</div>
 
@@ -604,9 +677,80 @@ import Layout from '../layouts/Layout.astro';
 		transition: color 0.2s, transform 0.2s;
 	}
 
-	.card:hover .card-arrow {
+	.card:hover .card-arrow,
+	.mini-card:hover .card-arrow {
 		color: #818cf8;
 		transform: translateX(4px);
+	}
+
+	.mini-projects {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		margin-top: 16px;
+	}
+
+	.mini-card {
+		display: flex;
+		align-items: center;
+		gap: 18px;
+		padding: 16px 20px;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.07);
+		border-radius: 14px;
+		text-decoration: none;
+		transition: background 0.2s, border-color 0.2s, transform 0.2s;
+	}
+
+	.mini-card:hover {
+		background: rgba(255, 255, 255, 0.05);
+		border-color: rgba(129, 140, 248, 0.3);
+		transform: translateY(-2px);
+	}
+
+	.mini-icon {
+		width: 52px;
+		height: 52px;
+		border-radius: 12px;
+		flex-shrink: 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.mini-icon img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.mini-body {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.mini-body h3 {
+		font-size: 18px;
+		font-weight: 600;
+		color: #f8fafc;
+		letter-spacing: -0.01em;
+		margin-bottom: 4px;
+		text-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+	}
+
+	.mini-desc {
+		font-size: 14px;
+		line-height: 1.6;
+		color: #94a3b8;
+		margin-bottom: 10px;
+	}
+
+	.mini-tags {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 6px;
 	}
 
 	@media (max-width: 640px) {
